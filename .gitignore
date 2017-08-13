@@ -1,3 +1,8 @@
+# Custom
+#.idea/ is prbly pycharm related
+.idea/
+
+# Common
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
