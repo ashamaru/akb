@@ -2,7 +2,7 @@
 id:
   - Primärschlüssel
   - Typ:  bigint
-  - Form: <auktionsid><positionsid>
+  - Form: auktionsid + positionsid
   
 Positionsname:
   - Typ:  verlinkt zur historie
