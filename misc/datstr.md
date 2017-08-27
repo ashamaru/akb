@@ -5,12 +5,12 @@ id:
   - Form: <auktionsid><positionsid>
   
 Positionsname:
-  - Typ:  text
+  - Typ:  verlinkt zur historie
 
 Aktuelles Gebot:
   - Typ:  decimal
 
-Fremdschlüssel zur Gebotshostorie:
+Fremdschlüssel zur Gebotshistorie:
   - Typ:  bigint
 
 Daten bzw. Beschreibung:
