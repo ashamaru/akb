@@ -18,3 +18,6 @@ Daten bzw. Beschreibung:
 
 Fremdschlüssel zur Imagetabelle
   - Typ:  bigint
+
+Ende des Gebots:
+  - Type: timefied
