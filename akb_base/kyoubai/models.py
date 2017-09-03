@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Position(models.Model):
     id_key = models.IntegerField('Identification Key', primary_key=True)
     pos_name = models.CharField(max_length=100)

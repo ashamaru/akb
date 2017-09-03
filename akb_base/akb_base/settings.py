@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'kyoubai.apps.KyoubaiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,9 +77,9 @@ WSGI_APPLICATION = 'akb_base.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'akbDb',         # use name of YOUR database
-        'USER': '',              # use YOUR privileged user
-        'PASSWORD': '',          # do I really need to point that out?
+        'NAME': 'akbDb',            # use name of YOUR database
+        'USER': '',                 # use YOUR privileged user
+        'PASSWORD': '',             # do I really need to point that out?
     }
 }
 
