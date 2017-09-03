@@ -2,6 +2,9 @@
 #.idea/ is prbly pycharm related
 .idea/
 
+# settings.py are specific to the local installment
+akb_base/akb_base/settings.py
+
 # Common
 # Byte-compiled / optimized / DLL files
 __pycache__/
