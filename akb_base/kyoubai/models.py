@@ -15,3 +15,6 @@ class Position(models.Model):
     state = models.CharField(max_length=100, default='used')
     pictures = models.CharField(max_length=100, default='prototyp')
 
+    def __str__(self):
+        return self.pos_name
+

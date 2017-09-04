@@ -11,5 +11,5 @@ class IndexView(generic.ListView):
     context_object_name = 'position_list'
 
     def get_queryset(self):
-        return Position.objects
+        return Position.objects.all()
 

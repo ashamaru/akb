@@ -27,6 +27,15 @@
                 </li>
             </ul>
         </div>
+    <div id="auction_list">
+        <h3>Alle Auktionen</h3>
+        {% for pos in position_list %}
+        <li>
+            <a>{{ pos.pos_name }}</a>
+        </li>
+        {% endfor %}
+
+    </div>
     </div>
 </body>
 </html>
