@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'akbDb',            # use name of YOUR database
-        'USER': '',                 # use YOUR privileged user
+        'USER': 'test',                 # use YOUR privileged user
         'PASSWORD': '',             # do I really need to point that out?
     }
 }
