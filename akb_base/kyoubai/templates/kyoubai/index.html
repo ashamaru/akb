@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/styles.css' %}" />
@@ -30,9 +30,33 @@
     <div id="auction_list">
         <h3>Alle Auktionen</h3>
         {% for pos in position_list %}
-        <li>
-            <a>{{ pos.pos_name }}</a>
-        </li>
+
+        <div class="position_preview">
+            <div class="box_left splitbox">
+                <div class="picture_field">
+                    <img src={{ pos.pictures }} alt="preview picture" height="300" width="400">
+                </div>
+                <div class="state_field">
+                    Zustand: {{ pos.state }}
+                </div>
+
+            </div>
+            <div class="box_right splitbox">
+                <div class="pos_name_field">
+                    <a>{{ pos.pos_name }}</a>
+                </div>
+                <div class="price_field">
+                    Aktuelles Gebot: XXX €
+                </div>
+                <div class="description_field">
+                    {{ pos.pos_desc }}
+                </div>
+                <div class="time_field">
+                    Auktion endet am: {{ pos.time_end }}
+                </div>
+            </div>
+        </div>
+
         {% endfor %}
 
     </div>

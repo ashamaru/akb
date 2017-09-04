@@ -6,7 +6,7 @@ from django.db import models
 class Position(models.Model):
     id_key = models.IntegerField('Identification Key', primary_key=True)
     pos_name = models.CharField(max_length=100)
-    pos_desc = models.CharField(max_length=1000)
+    pos_desc = models.TextField()
     price_min = models.IntegerField()
     price_growth = models.IntegerField()
     price_start = models.IntegerField()

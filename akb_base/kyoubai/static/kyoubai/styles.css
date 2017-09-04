@@ -11,7 +11,7 @@ body {
 }
 
 .main_content {
-    width: 80%;
+    width: 100%;
     margin: auto;
     background: #d7fcca;
 }
@@ -20,7 +20,6 @@ header {
     background: white;
     width: auto;
     height: 100px;
-    border-radius: 30, 30, 0, 0;
     margin-bottom: 0;
 }
 
@@ -40,3 +39,61 @@ header {
     float: left;
     width: 100px;
 }
+
+
+/* Auction display styles */
+
+.position_preview {
+    height: 340px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    background: white;
+    overflow: hidden;
+}
+
+.splitbox {
+    float: left;
+    margin: 10px;
+}
+
+.box_left {
+    width: 280px;
+}
+
+.picture_field {
+    background: pink;
+    width: 280px;
+    height: 280px;
+    margin-bottom: 5px;
+}
+
+.state_field {
+    font-size: 1.125em;
+}
+
+.box_right {
+    width: 800px;
+}
+
+.pos_name_field {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.price_field {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.description_field {
+    height: 150px;
+    background: #b2b2b2;
+    margin-bottom: 20px;
+}
+
+.time_field {
+    font-size: 1.4em;
+}
+
+
