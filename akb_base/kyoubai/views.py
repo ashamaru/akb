@@ -13,3 +13,7 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Position.objects.all()
 
+
+class ImpressumView(generic.TemplateView):
+    template_name = 'kyoubai/impressum.html'
+

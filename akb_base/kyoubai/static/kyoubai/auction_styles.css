@@ -1,0 +1,62 @@
+/* nav_bar style extension */
+#nav_bar .auction_active {
+    background: #bc4646;
+}
+
+/* Auction display styles */
+.position_preview {
+    height: 340px;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: black;
+    background: white;
+    overflow: hidden;
+}
+
+.splitbox {
+    float: left;
+    margin: 10px;
+}
+
+.box_left {
+    width: 280px;
+}
+
+.picture_field {
+    background: pink;
+    width: 280px;
+    height: 280px;
+    margin-bottom: 5px;
+}
+
+.state_field {
+    font-size: 1.125em;
+}
+
+.box_right {
+    width: 500px;
+}
+
+.pos_name_field {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.price_field {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.price_span {
+    color: green;
+}
+
+.description_field {
+    height: 150px;
+    background: #b2b2b2;
+    margin-bottom: 20px;
+}
+
+.time_field {
+    font-size: 1.4em;
+}

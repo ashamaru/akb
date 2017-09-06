@@ -1,68 +1,41 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/styles.css' %}" />
-    <meta charset="UTF-8">
-    <title>Auction-Template</title>
-</head>
-<body>
-    <header>
-        <div id="heading_picture">
-            <img src=# alt="heading_picture">
-        </div>
-        <div id="nav_bar">
-            <ul>
-                <li>
-                    <a>Home</a>
-                </li>
-                <li>
-                    <a class="active">Auktionen</a>
-                </li>
-                <li>
-                    <a>Mein Konto</a>
-                </li>
-                <li style="float:right">
-                    <a>Impressum</a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <div class="main_content">
-        <div class="left_container">
-            HI, I'm a template
-        </div>
-        <div id="content_container">
-            <h3>Alle Auktionen</h3>
-            {% for pos in position_list %}
+{% extends 'kyoubai/base_template.html' %}
 
-            <div class="position_preview">
-                <div class="box_left splitbox">
-                    <div class="picture_field">
-                        <img src={{ pos.pictures }} alt="preview picture" height="280" width="280">
-                    </div>
-                    <div class="state_field">
-                        Zustand: {{ pos.state }}
-                    </div>
+{% block stylesheets %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/auction_styles.css' %}" />
+{% endblock %}
+
+{% block left_container %}
+    HI, I'm a template on Auctions
+{% endblock %}
+
+{% block content_container %}
+<h3>Alle Auktionen</h3>
+    {% for pos in position_list %}
+        <div class="position_preview">
+            <div class="box_left splitbox">
+                <div class="picture_field">
+                    <img src={{ pos.pictures }} alt="preview picture" height="280" width="280">
                 </div>
-                <div class="box_right splitbox">
-                    <div class="pos_name_field">
-                        <a>{{ pos.pos_name }}</a>
-                    </div>
-                    <div class="price_field">
-                        Aktuelles Gebot: <span class="price_span">1000,95 €</span>
-                    </div>
-                    <div class="description_field">
-                        {{ pos.pos_desc }}
-                    </div>
-                    <div class="time_field">
-                        Auktion endet am: {{ pos.time_end }}
-                    </div>
+                <div class="state_field">
+                    Zustand: {{ pos.state }}
                 </div>
             </div>
-
-            {% endfor %}
+            <div class="box_right splitbox">
+                <div class="pos_name_field">
+                    <a>{{ pos.pos_name }}</a>
+                </div>
+                <div class="price_field">
+                    Aktuelles Gebot: <span class="price_span">1000,95 €</span>
+                </div>
+                <div class="description_field">
+                    {{ pos.pos_desc }}
+                </div>
+                <div class="time_field">
+                    Auktion endet am: {{ pos.time_end }}
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-</html>
+    {% endfor %}
+{% endblock %}
+
