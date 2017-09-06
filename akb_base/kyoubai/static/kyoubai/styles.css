@@ -8,19 +8,33 @@
 body {
     font-family: 'Roboto Condensed Light';
     background: #d9d9d9;
+    width: 1800px;
+    margin: auto;
+}
+
+#heading_picture {
+    background: white;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .main_content {
-    width: 100%;
-    margin: auto;
-    background: #d7fcca;
+    overflow: hidden;
+    background: #eaeaea;
 }
 
-header {
+.left_container {
+    width: 272px;
+    padding: 15px;
+    float: left;
+}
+
+#content_container {
+    width: 1478px;
+    padding: 10px;
+    float: left;
     background: white;
-    width: auto;
-    height: 100px;
-    margin-bottom: 0;
 }
 
 /* Top navigation bar styles */
@@ -48,7 +62,7 @@ header {
     text-align: center;
     text-decoration: none;
     width: 120px;
-    padding: 14px;
+    padding: 15px;
 }
 
 #nav_bar a:hover {
@@ -56,13 +70,15 @@ header {
 }
 
 #nav_bar .active {
-    background-color: #bc4646;
+    background: #bc4646;
 }
+
+
 
 /* Auction display styles */
 .position_preview {
     height: 340px;
-    border-style: solid;
+    border-bottom-style: solid;
     border-width: thin;
     border-color: black;
     background: white;
@@ -101,6 +117,10 @@ header {
 .price_field {
     font-size: 1.5em;
     margin-bottom: 10px;
+}
+
+.price_span {
+    color: green;
 }
 
 .description_field {

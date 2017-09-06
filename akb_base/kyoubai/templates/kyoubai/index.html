@@ -7,10 +7,10 @@
     <title>Auction-Template</title>
 </head>
 <body>
-    <div class="main_content">
-        <header>
-            <p>Heading Picture Template</p>
-        </header>
+    <header>
+        <div id="heading_picture">
+            <img src=# alt="heading_picture">
+        </div>
         <div id="nav_bar">
             <ul>
                 <li>
@@ -27,39 +27,42 @@
                 </li>
             </ul>
         </div>
-    <div id="auction_list">
-        <h3>Alle Auktionen</h3>
-        {% for pos in position_list %}
-
-        <div class="position_preview">
-            <div class="box_left splitbox">
-                <div class="picture_field">
-                    <img src={{ pos.pictures }} alt="preview picture" height="280" width="280">
-                </div>
-                <div class="state_field">
-                    Zustand: {{ pos.state }}
-                </div>
-
-            </div>
-            <div class="box_right splitbox">
-                <div class="pos_name_field">
-                    <a>{{ pos.pos_name }}</a>
-                </div>
-                <div class="price_field">
-                    Aktuelles Gebot: XXX €
-                </div>
-                <div class="description_field">
-                    {{ pos.pos_desc }}
-                </div>
-                <div class="time_field">
-                    Auktion endet am: {{ pos.time_end }}
-                </div>
-            </div>
+    </header>
+    <div class="main_content">
+        <div class="left_container">
+            HI, I'm a template
         </div>
+        <div id="content_container">
+            <h3>Alle Auktionen</h3>
+            {% for pos in position_list %}
 
-        {% endfor %}
+            <div class="position_preview">
+                <div class="box_left splitbox">
+                    <div class="picture_field">
+                        <img src={{ pos.pictures }} alt="preview picture" height="280" width="280">
+                    </div>
+                    <div class="state_field">
+                        Zustand: {{ pos.state }}
+                    </div>
+                </div>
+                <div class="box_right splitbox">
+                    <div class="pos_name_field">
+                        <a>{{ pos.pos_name }}</a>
+                    </div>
+                    <div class="price_field">
+                        Aktuelles Gebot: <span class="price_span">1000,95 €</span>
+                    </div>
+                    <div class="description_field">
+                        {{ pos.pos_desc }}
+                    </div>
+                    <div class="time_field">
+                        Auktion endet am: {{ pos.time_end }}
+                    </div>
+                </div>
+            </div>
 
-    </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
