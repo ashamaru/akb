@@ -14,6 +14,13 @@ class IndexView(generic.ListView):
         return Position.objects.all()
 
 
+class MyAccountView(generic.TemplateView):
+    template_name = 'kyoubai/myaccount.html'
+
+
 class ImpressumView(generic.TemplateView):
     template_name = 'kyoubai/impressum.html'
+
+
+
 

@@ -1,0 +1,14 @@
+{% extends 'kyoubai/base_template.html' %}
+
+{% block stylesheets %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/myaccount_styles.css' %}" />
+{% endblock %}
+
+{% block left_container %}
+    HI, I'm a template on My Account
+{% endblock %}
+
+{% block content_container %}
+    <h3>Mein Konto</h3>
+{% endblock %}
