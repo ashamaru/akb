@@ -3,15 +3,23 @@
 {% block stylesheets %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/auction_styles.css' %}" />
+    <script src="{% static 'kyoubai/filter_script.js' %}"> </script>
 {% endblock %}
 
 {% block left_container %}
-    HI, I'm a template on Auctions
+    <h3>Filter Options</h3>
+    <select id="state_filter">
+        <option value="all">Alles</option>
+        <option value="new">Neu</option>
+        <option value="used">Gebraucht</option>
+    </select>
+
+    <input type="button" id="submit_filter_button" value="Filter Anwenden">
 {% endblock %}
 
 {% block content_container %}
 <h3>Alle Auktionen</h3>
-    {% for pos in position_list %}
+    {% for pos in context.position_list %}
         <div class="position_preview">
             <div class="box_left splitbox">
                 <div class="picture_field">

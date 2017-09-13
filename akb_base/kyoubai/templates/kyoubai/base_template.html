@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Auktionshaus ATH</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/base_styles.css' %}" />
     {% block stylesheets %}
@@ -19,7 +20,7 @@
                     <a>Home</a>
                 </li>
                 <li>
-                    <a href= "{% url 'kyoubai:index' %}"class="auction_active">Auktionen</a>
+                    <a href= "{% url 'kyoubai:index' None %}"class="auction_active">Auktionen</a>
                 </li>
                 <li>
                     <a href="{% url 'kyoubai:myaccount' %}" class="myaccount_active">Mein Konto</a>
