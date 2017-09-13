@@ -10,14 +10,24 @@ class IndexView(generic.ListView):
     template_name = 'kyoubai/index.html'
     context_object_name = 'context'
 
+    def get_queryset(self):
+        return {
+            "position_list": Position.objects.all()
+        }
+
+
+class FilteredIndexView(generic.ListView):
+    template_name = 'kyoubai/index.html'
+    context_object_name = 'context'
+
     def filter(self):
         # kwargs holds the values from the url, see urls.py for namespaces
         position_list = Position.objects.all()
-
-        if (self.kwargs['state'] == "used"):
-            position_list = position_list.filter(state='used')
-        elif (self.kwargs['state'] == "new"):
-            position_list = position_list.filter(state='new')
+        if (self.kwargs != None):
+            if (self.kwargs['state'] == "used"):
+                position_list = position_list.filter(state='used')
+            elif (self.kwargs['state'] == "new"):
+                position_list = position_list.filter(state='new')
 
         return position_list
 

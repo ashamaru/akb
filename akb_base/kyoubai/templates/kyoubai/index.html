@@ -7,14 +7,21 @@
 {% endblock %}
 
 {% block left_container %}
-    <h3>Filter Options</h3>
-    <select id="state_filter">
-        <option value="all">Alles</option>
-        <option value="new">Neu</option>
-        <option value="used">Gebraucht</option>
-    </select>
-
-    <input type="button" id="submit_filter_button" value="Filter Anwenden">
+    <h3>Filter Optionen</h3>
+    <div class="filter_box">
+        <h4>Zustand</h4>
+        <select id="state_filter">
+            <option value="all">Alles</option>
+            <option value="new">Neu</option>
+            <option value="used">Gebraucht</option>
+        </select>
+    </div>
+    <div class="filter_box">
+        <h4>Preisbereich</h4>
+        von <input id="min_price_filter" type="text" size="10">
+        bis <input id="max_price_filter" type="text" size="10">
+    </div>
+    <input type="button" id="submit_filter_button" value="Filter Anwenden" width="20px">
 {% endblock %}
 
 {% block content_container %}

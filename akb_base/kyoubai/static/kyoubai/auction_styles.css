@@ -3,6 +3,23 @@
     background: #bc4646;
 }
 
+/* Filter display styles */
+
+.filter_box {
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: black;
+}
+
+.filter_box h4 {
+    margin-bottom: 10px;
+    border-width: thin;
+    border-color: black;
+}
+
+
 /* Auction display styles */
 .position_preview {
     height: 340px;
