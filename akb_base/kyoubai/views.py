@@ -22,10 +22,7 @@ class IndexView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data()
         if self.request_ref is not None:
-            print(self.request_ref.user)
             context['user'] = self.request_ref.user
-        else:
-            print("self.request_ref was None")
         return context
 
     def get_queryset(self):
