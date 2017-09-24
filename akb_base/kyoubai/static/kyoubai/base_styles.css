@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto Condensed Light';
     background: #d9d9d9;
-    width: 1800px;
+    max-width: 1800px;
     margin: auto;
 }
 
@@ -43,7 +43,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #de6868;
+    background: #68de68;
 }
 
 #nav_bar li {
@@ -66,5 +66,5 @@ body {
 }
 
 #nav_bar a:hover {
-    background-color: #cd5757
+    background-color: #57cd57
 }

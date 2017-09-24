@@ -26,28 +26,60 @@
 
 {% block content_container %}
 <h3>Alle Auktionen</h3>
+    <div class="position_preview">
+            <div class="box_left splitbox">
+                <div class="picture_field">
+                    <img src={{ pos.pictures }} alt="preview picture" height="80" width="80" hidden="true">
+                </div>
+            </div>
+            <div class="box_right splitbox">
+                <div class="center_box">
+                    <div class="pos_name_field to_seperate">
+                        <a>Position</a>
+                    </div>
+                    <div class="state_field to_seperate">
+                        <span>Zustand</span>
+                    </div>
+                    <div class="time_field to_seperate">
+                        <span>Position endet am</span>
+                    </div>
+                    <div class="price_field to_seperate">
+                        <span>Gebot</span>
+                    </div>
+                </div>
+                <!--
+                <div class="description_field">
+                    {{ pos.pos_desc }}
+                </div>
+                -->
+            </div>
+        </div>
     {% for pos in context.position_list %}
         <div class="position_preview">
             <div class="box_left splitbox">
                 <div class="picture_field">
-                    <img src={{ pos.pictures }} alt="preview picture" height="280" width="280">
-                </div>
-                <div class="state_field">
-                    Zustand: {{ pos.state }}
+                    <img src={{ pos.pictures }} alt="preview picture" height="80" width="80">
                 </div>
             </div>
             <div class="box_right splitbox">
-                <div class="pos_name_field">
-                    <a>{{ pos.pos_name }}</a>
-                </div>
-                <div class="price_field">
-                    Aktuelles Gebot: <span class="price_span">1000,95 €</span>
-                </div>
-                <div class="description_field">
+                <div class="center_box">
+                    <div class="pos_name_field to_seperate">
+                        <a class="pos_detail_ref" href="#">{{ pos.pos_name }}</a>
+                    </div>
+                    <div class="state_field to_seperate">
+                        <span class="list_span">{{ pos.state }}</span>
+                    </div>
+                    <div class="time_field to_seperate">
+                        <span class="list_span">{{ pos.time_end }}</span>
+                    </div>
+                    <div class="price_field to_seperate">
+                        <span class="price_span">{{pos.price_start}} €</span>
+                    </div>
+                    <!--
+                    <div class="description_field">
                     {{ pos.pos_desc }}
-                </div>
-                <div class="time_field">
-                    Auktion endet am: {{ pos.time_end }}
+                    </div>
+                    -->
                 </div>
             </div>
         </div>

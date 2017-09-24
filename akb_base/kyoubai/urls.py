@@ -12,5 +12,8 @@ urlpatterns = [
     url(r'^impressum$', views.ImpressumView.as_view(), name='impressum'),
     # /kyoubai/myaccount
     url(r'^myaccount$', views.MyAccountView.as_view(), name='myaccount'),
-
+    # /kyoubai/sign_up
+    url(r'^sign_up$', views.SignUpView.as_view(), name='sign_up'),
+    # /kyoubai/logout
+    url(r'^logout$', views.LogoutView.as_view(), name='logout'),
 ]

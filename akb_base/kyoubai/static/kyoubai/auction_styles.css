@@ -1,8 +1,11 @@
 /* nav_bar style extension */
 #nav_bar .auction_active {
-    background: #bc4646;
+    background: #46bc46;
 }
 
+#content_container {
+    max-width: 1000px;
+}
 /* Filter display styles */
 
 .filter_box {
@@ -22,7 +25,7 @@
 
 /* Auction display styles */
 .position_preview {
-    height: 340px;
+    /* height: 340px; */
     border-bottom-style: solid;
     border-width: thin;
     border-color: black;
@@ -36,36 +39,51 @@
 }
 
 .box_left {
-    width: 280px;
+    width: 80px;
 }
 
 .picture_field {
-    background: pink;
-    width: 280px;
-    height: 280px;
+    background: #e2e2e2;
+    width: 80px;
+    height: 80px;
     margin-bottom: 5px;
 }
 
 .state_field {
-    font-size: 1.125em;
+    width: 100px;
 }
 
 .box_right {
-    width: 500px;
+    /*width: 500px;*/
+}
+
+.pos_detail_ref {
+    color: green;
 }
 
 .pos_name_field {
-    font-size: 1.4em;
+    width: 200px;
     margin-bottom: 5px;
 }
 
 .price_field {
-    font-size: 1.5em;
+    width: 100px;
     margin-bottom: 10px;
+    padding-right: 10px;
 }
 
+.list_span {
+    display: block;
+    text-align: center;
+}
 .price_span {
+    text-align: right;
+    display: block;
     color: green;
+}
+
+.center_box {
+    margin: 0px 0px 0px 0px;
 }
 
 .description_field {
@@ -75,5 +93,14 @@
 }
 
 .time_field {
-    font-size: 1.4em;
+    width: 250px;
+}
+
+.to_seperate {
+    display: inline-block;
+    height: 80px;
+    font-size: 1.3em;
+    border-right-style: solid;
+    border-right-width: 2px;
+    margin-right: 5px;
 }

@@ -28,6 +28,15 @@
                 <li style="float:right">
                     <a href= "{% url 'kyoubai:impressum' %}"class="impressum_active" >Impressum</a>
                 </li>
+                <li style="float: right;">
+                    {% if user.is_authenticated %}
+                    <a href="#">
+                    {{ user.username }}
+                    </a>
+                    {% else %}
+                    <a href="/kyoubai/myaccount">Login?</a>
+                    {% endif %}
+                </li>
             </ul>
         </div>
     </header>
