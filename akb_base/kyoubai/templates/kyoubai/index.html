@@ -25,24 +25,24 @@
 {% endblock %}
 
 {% block content_container %}
-<h3>Alle Auktionen</h3>
+<h3 style="display: inline-block;">Alle Auktionen</h3>
     <table id="position_list">
         <thead>
             <tr>
-                <th>
+                <th class="pos_table_cell">
                     <!--<img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="Preview" height="80" width="80" hidden="true">-->
                     <span>Preview</span>
                 </th>
-                <th class="pos_name_field">
+                <th class="pos_name_field pos_table_cell">
                     <a class="pos_detail_ref">Position</a>
                 </th>
-                <th class="state_field">
+                <th class="state_field pos_table_cell">
                     <span class="list_span">Zustand</span>
                 </th>
-                <th class="time_field">
+                <th class="time_field pos_table_cell">
                     <span class="list_span">Position endet am</span>
                 </th>
-                <th class="price_field">
+                <th class="price_field pos_table_cell">
                     <span class="price_span">Gebot</span>
                 </th>
             </tr>
@@ -51,18 +51,18 @@
             {% for pos in context.position_list %}
             <tr>
                 <td>
-                    <img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="preview picture" height="80" width="80">
+                    <img class="pos_table_cell" src="{% static 'kyoubai/images/prev_tree.png' %}" alt="preview picture" height="80" width="80">
                 </td>
-                <td class="pos_name_field">
+                <td class="pos_name_field pos_table_cell">
                     <a class="pos_detail_ref" href="#">{{ pos.pos_name }}</a>
                 </td>
-                <td class="state_field">
+                <td class="state_field pos_table_cell">
                     <span class="list_span">{{ pos.state }}</span>
                 </td>
-                <td class="time_field">
+                <td class="time_field pos_table_cell">
                     <span class="list_span">{{ pos.time_end }}</span>
                 </td>
-                <td class="price_field">
+                <td class="price_field pos_table_cell">
                     <span class="price_span">{{pos.price_start}} €</span>
                 </td>
             </tr>

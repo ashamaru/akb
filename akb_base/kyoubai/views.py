@@ -43,7 +43,6 @@ class FilteredIndexView(generic.ListView):
                 position_list = position_list.filter(state='used')
             elif (self.kwargs['state'] == "new"):
                 position_list = position_list.filter(state='new')
-
         return position_list
 
     def get_queryset(self):

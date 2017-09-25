@@ -1,14 +1,20 @@
 /* nav_bar style extension */
 #nav_bar .auction_active {
+    display: block;
     background: #46bc46;
 }
 
-#content_container {
-    max-width: 1000px;
-}
+
 /* Filter display styles */
 
+#content_container {
+    display: block;
+    background-color: #e2e2e2;
+    width: 750px;
+}
+
 .filter_box {
+    display: block;
     color: #333;
     padding-bottom: 10px;
     border-bottom-style: solid;
@@ -23,88 +29,73 @@
 }
 
 
-/* Auction display styles */
-.position_preview {
-    /* height: 340px; */
-    border-bottom-style: solid;
-    border-width: thin;
-    border-color: black;
-    background: white;
-    overflow: hidden;
+/* Table display styles */
+
+.pos_table_cell {
+    /* background-color: purple; */
 }
 
-.splitbox {
-    float: left;
-    margin: 10px;
+#position_list {
+    border-spacing: 0;
+    border-collapse: collapse;
+    /* background-color: cyan; */
 }
 
-.box_left {
-    width: 80px;
+#position_list td,th {
+    /*
+    background: #c2c2c2;
+    */
+    border: thin black solid;
+    padding: 0px;
+    margin 0px;
+}
+
+#position_list tr {
+    /*
+    border-bottom: 1px solid #222;
+    */
 }
 
 .picture_field {
     background: #e2e2e2;
+    /*
     width: 80px;
     height: 80px;
-    margin-bottom: 5px;
+    */
+}
+
+.pos_name_field {
+    width: 200px;
+}
+
+.pos_detail_ref {
+    color: green;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.price_field {
+    text-align: right;
+    width: 100px;
+}
+
+.price_span {
+    display: block;
+    text-align: right;
+    color: green;
+    padding-right: 10px;
 }
 
 .state_field {
     width: 100px;
 }
 
-.box_right {
-    /*width: 500px;*/
-}
-
-.pos_detail_ref {
-    color: green;
-}
-
-.pos_name_field {
-    padding-left: 40px;
-    text-align: left;
-    width: 200px;
-    margin-bottom: 5px;
-}
-
-.price_field {
-    text-align: right;
-    width: 100px;
-    margin-bottom: 10px;
-    padding-right: 10px;
+.time_field {
+    width: 250px;
 }
 
 .list_span {
     display: block;
     text-align: right;
-}
-.price_span {
-    text-align: right;
-    display: block;
-    color: green;
-}
-
-.center_box {
-    margin: 0px 0px 0px 0px;
-}
-
-.description_field {
-    text-align: right;
-    height: 150px;
-    background: #b2b2b2;
-    margin-bottom: 20px;
-}
-
-.time_field {
-    width: 250px;
-}
-
-.to_seperate {
-    display: inline-block;
-    height: 80px;
-    font-size: 1.3em;
-    border-right-style: solid;
-    border-right-width: 2px;
-    margin-right: 5px;
+    padding-right: 10px;
 }
