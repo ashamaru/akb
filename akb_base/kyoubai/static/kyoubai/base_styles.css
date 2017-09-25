@@ -51,7 +51,7 @@ body {
     border-right: 1px solid #000;
 }
 
-#nav_bar li:last-child {
+#nav_bar li:nth-last-child(2) {
     border-right: none;
 }
 

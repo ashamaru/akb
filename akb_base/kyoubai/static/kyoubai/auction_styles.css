@@ -108,3 +108,64 @@
     border-right-width: 2px;
     margin-right: 5px;
 }
+
+/* Pagination bar styles */
+
+#page_bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+#page_bar li {
+    float: left;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-right: 5px;
+
+}
+
+#page_bar span {
+    color: #000;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 20px;
+    padding: 5px;
+}
+
+#page_bar .disabled span {
+    color: #000;
+    background: grey;
+}
+
+#page_bar li:nth-last-child(1) {
+    margin-right: none;
+}
+
+#page_bar a {
+    color: #000;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#page_bar .current_page {
+    color: #000;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 20px;
+    padding: 5px;
+    background: #68de68;
+    border-radius: 5px;
+}
+
+#page_bar a:hover {
+    background-color: #57cd57
+}

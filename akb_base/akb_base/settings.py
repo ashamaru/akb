@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'akbDb',            # use name of YOUR database
-        'USER': 'ashamaru',                 # use YOUR privileged user
-        'PASSWORD': 'bolzenschneider',             # do I really need to point that out?
+        'USER': '',                 # use YOUR privileged user
+        'PASSWORD': '',             # do I really need to point that out?
     }
 }
 

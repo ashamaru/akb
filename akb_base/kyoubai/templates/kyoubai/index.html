@@ -48,7 +48,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for pos in context.position_list %}
+            {% for pos in context %}
             <tr>
                 <td>
                     <img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="preview picture" height="80" width="80">
@@ -69,5 +69,28 @@
         {% endfor %}
         </tbody>
     </table>
+{% if is_paginated %}
+<div id="page_bar">
+    <ul>
+        {% if page_obj.has_previous %}
+            <li class="prev_next"><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+            <li class="prev_next disabled"><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+                <li class="active"><span class="current_page">{{ i }}</span></li>
+            {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+            <li class="prev_next"><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+        {% else %}
+            <li class="prev_next disabled"><span>&raquo;</span></li>
+        {% endif %}
+    </ul>
+</div>
+{% endif %}
 {% endblock %}
 

@@ -10,8 +10,11 @@ from .models import Position
 
 
 class IndexView(generic.ListView):
+    model = Position
     template_name = 'kyoubai/index.html'
     context_object_name = 'context'
+    paginate_by = 1     # 1 just for testing
+    queryset = Position.objects.all()
 
     request_ref = None
 
@@ -25,15 +28,11 @@ class IndexView(generic.ListView):
             context['user'] = self.request_ref.user
         return context
 
-    def get_queryset(self):
-        return {
-            "position_list": Position.objects.all()
-        }
-
 
 class FilteredIndexView(generic.ListView):
     template_name = 'kyoubai/index.html'
     context_object_name = 'context'
+    paginate_by = 1     # 1 just for testing
 
     def filter(self):
         # kwargs holds the values from the url, see urls.py for namespaces
@@ -47,9 +46,7 @@ class FilteredIndexView(generic.ListView):
         return position_list
 
     def get_queryset(self):
-        return {
-            "position_list": self.filter(),
-        }
+        return self.filter()
 
 
 class MyAccountView(generic.TemplateView):
