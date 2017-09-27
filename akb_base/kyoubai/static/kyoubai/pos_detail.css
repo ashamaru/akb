@@ -1,5 +1,10 @@
 
 #pseudo_container_sidebar {
     background-color: grey;
-    width: 200x;
+    min-width: 200x;
+    min-height: 200px;
+}
+
+#detail_wrapper {
+    min-width: 1000px;
 }

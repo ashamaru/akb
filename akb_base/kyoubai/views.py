@@ -60,7 +60,7 @@ class PositionDetailView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(PositionDetailView, self).get_context_data()
-        context['pos'] = Position.objects.get(pk=self.requested_pos)
+        context['pos'] = Position.objects.get(id_key=self.requested_pos)
         return context
 
 class MyAccountView(generic.TemplateView):

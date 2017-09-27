@@ -7,19 +7,23 @@
 /* Basic Styles */
 body {
     font-family: 'Roboto Condensed Light';
-    background: #d9d9d9;
+    background: #444;
     max-width: 1800px;
     margin: auto;
 }
 
+header {
+    background-color: cadetblue;
+}
+
 #heading_picture {
-    background: white;
     height: 100px;
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
 .main_content {
+    min-width: 1300px;
     overflow: hidden;
     background: #eaeaea;
 }
@@ -31,7 +35,6 @@ body {
 }
 
 #content_container {
-    width: 1478px;
     padding: 10px;
     float: left;
     background: white;
@@ -67,4 +70,9 @@ body {
 
 #nav_bar a:hover {
     background-color: #cd5757
+}
+
+footer {
+    background-color: #444;
+    height: 160px;
 }
