@@ -1,7 +1,7 @@
 /* nav_bar style extension */
 #nav_bar .auction_active {
     display: block;
-    background: #46bc46;
+    background: #bc4646;
 }
 
 
@@ -9,8 +9,8 @@
 
 #content_container {
     display: block;
-    background-color: #e2e2e2;
-    width: 750px;
+    background-color: #fafafa;
+    max-width: 950px;
 }
 
 .filter_box {
@@ -41,19 +41,43 @@
     /* background-color: cyan; */
 }
 
+/*
+#position_list th, td {
+    padding: 20px;
+    margin: 20px;
+    background-color: beige;
+}
+*/
+
+#position_list img {
+    width 10px !important;
+    height: 100px !important;
+    padding: 0px;
+}
+
+#position_list > tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+#position_list > tbody tr:hover {
+    background-color: orange;
+}
+
 #position_list td,th {
     /*
     background: #c2c2c2;
     */
     border: thin black solid;
-    padding: 0px;
-    margin 0px;
+    padding: 0px !important;
+    margin 0px !important;
 }
 
 #position_list tr {
     /*
     border-bottom: 1px solid #222;
     */
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .picture_field {
@@ -69,7 +93,7 @@
 }
 
 .pos_detail_ref {
-    color: green;
+    color: indianred;
     text-align: left;
     padding-left: 10px;
 }
@@ -82,7 +106,7 @@
 .price_span {
     display: block;
     text-align: right;
-    color: green;
+    color: indianred;
     padding-right: 10px;
 }
 
@@ -98,4 +122,66 @@
     display: block;
     text-align: right;
     padding-right: 10px;
+}
+
+
+/* Pagination bar styles */
+
+#page_bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+#page_bar li {
+    float: left;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-right: 5px;
+
+}
+
+#page_bar span {
+    color: #000;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 20px;
+    padding: 5px;
+}
+
+#page_bar .disabled span {
+    color: #000;
+    background: grey;
+}
+
+#page_bar li:nth-last-child(1) {
+    margin-right: none;
+}
+
+#page_bar a {
+    color: #000;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#page_bar .current_page {
+    color: #000;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 20px;
+    padding: 5px;
+    background: #de6868;
+    border-radius: 5px;
+}
+
+#page_bar a:hover {
+    background-color: #cd5757
 }

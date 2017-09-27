@@ -43,7 +43,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #68de68;
+    background: #de6868;
 }
 
 #nav_bar li {
@@ -51,7 +51,7 @@ body {
     border-right: 1px solid #000;
 }
 
-#nav_bar li:last-child {
+#nav_bar li:nth-last-child(2) {
     border-right: none;
 }
 
@@ -66,5 +66,5 @@ body {
 }
 
 #nav_bar a:hover {
-    background-color: #57cd57
+    background-color: #cd5757
 }

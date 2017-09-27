@@ -1,0 +1,20 @@
+{% extends 'kyoubai/base_template.html' %}
+
+{% block stylesheets %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/pos_detail_styles.css' %}" />
+{% endblock %}
+
+{% block left_container %}
+    <div id="pseudo_container_sidebar" />
+{% endblock %}
+
+{% block content_container %}
+    <h2>{{ pos.pos_name }}</h2>
+    <p>{{pos.pos_desc}}</p>
+    <p>{{pos.price_start}}</p>
+    <p>{{pos.price_growth}}</p>
+    <p>{{pos.time_end}}</p>
+    <p>{{pos.state}}</p>
+{% endblock %}
+
