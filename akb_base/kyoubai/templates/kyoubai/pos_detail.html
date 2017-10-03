@@ -6,6 +6,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/carousell_styles.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/pos_detail.css' %}" />
+    <script src="{% static 'kyoubai/remove_img_script.js' %}"> </script>
 
 {% endblock %}
 
@@ -35,15 +36,19 @@
         <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/1.jpg" style="width:100%;">
+                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/1.jpg" onerror="removeWrapper(this)" style="width:100%;">
                 </div>
 
                 <div class="item">
-                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/2.jpg" style="width:100%;">
+                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/2.jpg" onerror="removeWrapper(this)" style="width:100%;">
                 </div>
 
                 <div class="item">
-                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/3.jpg" style="width:100%;">
+                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/3.jpg" onerror="removeWrapper(this)" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/4.jpg" onerror="removeWrapper(this)" style="width:100%;">
                 </div>
             </div>
 
