@@ -1,25 +1,48 @@
 /* font configurations */
+
 @font-face {
     font-family: Roboto Condensed Light;
     src: url("./fonts/RobotoCondensed-Light.ttf");
 }
 
+
 /* Basic Styles */
+
 body {
     font-family: 'Roboto Condensed Light';
-    background: #444;
-    max-width: 1800px;
+    background: #fafafa;
     margin: auto;
 }
 
 header {
-    background-color: cadetblue;
+    background-color: white;
 }
 
 #heading_picture {
-    height: 100px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+#heading_picture img {
+    height: 200px;
+    display: block;
+    /*
+    margin-right: 0px;
+    margin-left: auto;
+    position: absolut;
+    */
+    float: right;
+}
+
+#page_logo_div {
+    height: 150px;
+    position: absolute;
+}
+
+#horizontal_rule_div {
+    background-color: #444;
+    height: 20px;
+    clear: both;
 }
 
 .main_content {
@@ -35,13 +58,22 @@ header {
 }
 
 #content_container {
+    min-width: 1000px;
     padding: 10px;
     float: left;
     background: white;
 }
 
+
 /* Top navigation bar styles */
+
+#nav_bar {
+    position: absolute;
+    top: 150px;
+}
+
 #nav_bar ul {
+    height: 50px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -73,6 +105,6 @@ header {
 }
 
 footer {
-    background-color: #444;
+    background-color: #fafafa;
     height: 160px;
 }

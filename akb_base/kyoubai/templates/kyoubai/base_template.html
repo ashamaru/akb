@@ -12,7 +12,11 @@
 <body>
     <header>
         <div id="heading_picture">
-            <img src=# alt="heading_picture">
+            {% load static %}
+            <img src="{% static 'kyoubai/images/Headgrafik_ATH/HomepageTitel.png' %}" alt="heading_picture">
+        </div>
+        <div id="page_logo_div">
+            <img src="{% static 'kyoubai/images/ath_logo.png' %}">
         </div>
         <div id="nav_bar">
             <ul>
@@ -39,6 +43,7 @@
                 </li>
             </ul>
         </div>
+        <div id="horizontal_rule_div"></div>
     </header>
     <div class="main_content">
         <div class="left_container">
