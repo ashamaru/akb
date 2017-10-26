@@ -47,6 +47,7 @@ class FilteredIndexView(generic.ListView):
     def get_queryset(self):
         return self.filter()
 
+
 class PositionDetailView(generic.TemplateView):
     template_name = 'kyoubai/pos_detail.html'
     requested_pos = None
@@ -63,13 +64,14 @@ class PositionDetailView(generic.TemplateView):
         context['pos'] = Position.objects.get(id_key=self.requested_pos)
         return context
 
+
 class MyAccountView(generic.TemplateView):
     template_name = 'kyoubai/myaccount.html'
 
-    #def get(self, request, *args, **kwargs):
-     #   if request.user.is_authenticated:
-      #      return HttpResponse('Account information should be displayed here')
-       # return super(MyAccountView, self).get(request, *args, **kwargs)
+    # def get(self, request, *args, **kwargs):
+    #     if request.user.is_authenticated:
+    #       return HttpResponse('Account information should be displayed here')
+    # return super(MyAccountView, self).get(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         username = request.POST['username']
@@ -89,6 +91,7 @@ class ImpressumView(generic.ListView):
     def get_queryset(self):
         return self.args
 
+
 class SignUpView(generic.TemplateView):
     template_name = 'kyoubai/sign_up.html'
 
@@ -100,6 +103,7 @@ class SignUpView(generic.TemplateView):
             return HttpResponse('Account erfolgreich erstellt<br><a href="/kyoubai/auctions">zurück</a>')
         else:
             return HttpResponse('Account creation failed')
+
 
 class LogoutView(generic.View):
 
