@@ -16,12 +16,13 @@
 
 {% block content_container %}
 <div id="detail_wrapper">
-    <h2>{{ pos.pos_name }}</h2>
-    <p>{{pos.pos_desc}}</p>
-    <p>{{pos.price_start}}</p>
-    <p>{{pos.price_growth}}</p>
-    <p>{{pos.time_end}}</p>
-    <p>{{pos.state}}</p>
+    <h2>{{ article.a_name }}</h2>
+    <p>{{ article.a_desc }}</p>
+    <p>{{ article.price_start }}</p>
+    <p>{{ article.price_growth }}</p>
+    <p>{{ article.a_time_end }}</p>
+    <p>{{ article.a_state }}</p>
+    <p>Aktuelles Gebot: {{ mbid }}</p>
 </div>
 
 <div class="carousel_container">
@@ -62,9 +63,25 @@
         </div>
 </div>
 
+<div>
+    {% if user.is_authenticated %}
+    <p>
+        <form id="bid_form" method="post" action="/kyoubai/auctions/pos/{{ cur_pos }}">
+            {% csrf_token %}
+            {{ bid_form }}
+            <input type="submit" value="Bieten">
+        </form>
+    </p>
+    {% else %}
+    <p>
+        User is not logged in, provide option to login here ..
+    </p>
+    {% endif %}
+</div>
+
 {% endblock %}
 
 {% block footer %}
-    We always need a footer!!!!!
+    We always need a footer!
 {% endblock %}
 

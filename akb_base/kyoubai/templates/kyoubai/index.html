@@ -48,22 +48,22 @@
             </tr>
         </thead>
         <tbody>
-            {% for pos in context %}
+            {% for article in context %}
             <tr>
                 <td class="pos_table_cell">
                     <img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="preview picture">
                 </td>
                 <td class="pos_name_field pos_table_cell">
-                    <a class="pos_detail_ref" href="/kyoubai/auctions/pos/{{ pos.id_key }}">{{ pos.pos_name }}</a>
+                    <a class="pos_detail_ref" href="/kyoubai/auctions/pos/{{ article.a_id }}">{{ article.a_name }}</a>
                 </td>
                 <td class="state_field pos_table_cell">
-                    <span class="list_span">{{ pos.state }}</span>
+                    <span class="list_span">{{ article.a_state }}</span>
                 </td>
                 <td class="time_field pos_table_cell">
-                    <span class="list_span">{{ pos.time_end }}</span>
+                    <span class="list_span">{{ article.a_time_end }}</span>
                 </td>
                 <td class="price_field pos_table_cell">
-                    <span class="price_span">{{pos.price_start}} €</span>
+                    <span class="price_span">{{article.price_start}} €</span>
                 </td>
             </tr>
         {% endfor %}
