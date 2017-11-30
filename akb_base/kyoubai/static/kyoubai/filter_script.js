@@ -1,3 +1,5 @@
+/* überarbeitung des bereichs */
+
 $(document).ready(function(){
     console.log("JQuery-kun ready to kick ass!");
     var state_filter = $("#state_filter");

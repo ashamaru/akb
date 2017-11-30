@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AnonymousUser
 
 from .forms import LoginForm, BidForm
 
@@ -97,10 +97,12 @@ class PositionDetailView(generic.TemplateView):
 class MyAccountView(generic.TemplateView):
     template_name = 'kyoubai/myaccount.html'
     login_form = None
+    user = None
 
     def get(self, request, *args, **kwargs):
         form = LoginForm()
         self.login_form = form
+        self.user = request.user
         # if request.user.is_authenticated:
         #    return HttpResponse('Account information should be displayed here')
         return super(MyAccountView, self).get(request, *args, **kwargs)
@@ -121,6 +123,11 @@ class MyAccountView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(MyAccountView, self).get_context_data()
         context['login_form'] = self.login_form
+        print(self.user)
+        if self.user is not None and self.user.id is not None:
+            customer = Customer.objects.get(c_user = self.user)
+            print(customer)
+            context['customer'] = customer
         return context
 
 

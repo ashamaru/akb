@@ -5,15 +5,27 @@
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/myaccount_styles.css' %}" />
 {% endblock %}
 
+
 {% block left_container %}
     HI, I'm a template on My Account
 {% endblock %}
 
 {% block content_container %}
 <h3>Mein Konto</h3>
+
 {% if user.is_authenticated %}
+
+<div id="user_profile_wrapper">
+    <h2>{{ user.username }} </h2>
+    <p><b>Name:</b> {{ customer.c_name }}</p>
+    <p><b>Vorname:</b> {{ customer.c_first_name }}</p>
+    <p><b>Email:</b> {{ customer.c_email }}</p>
+
+</div>
 <a href="/kyoubai/logout">Logout</a>
+
 {% else %}
+
 <h2>Login Form</h2>
 <form id="login-form" action="/kyoubai/myaccount" method="post">
     {% csrf_token %}
@@ -21,5 +33,6 @@
     <input type="submit" value="Log in" />
 </form>
 <a href="sign_up">Sign up</a>
+
 {% endif %}
 {% endblock %}

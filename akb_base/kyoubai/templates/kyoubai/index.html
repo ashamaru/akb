@@ -1,12 +1,17 @@
 {% extends 'kyoubai/base_template.html' %}
 
+
 {% block stylesheets %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/auction_styles.css' %}" />
+    <!-- überarbeitung
     <script src="{% static 'kyoubai/filter_script.js' %}"> </script>
+    -->
 {% endblock %}
 
+
 {% block left_container %}
+    <!-- überarbeitung
     <h3>Filter Optionen</h3>
     <div class="filter_box">
         <h4>Zustand</h4>
@@ -22,53 +27,58 @@
         bis <input id="max_price_filter" type="text" size="10">
     </div>
     <input type="button" id="submit_filter_button" value="Filter Anwenden" width="20px">
+    -->
 {% endblock %}
+
 
 {% block content_container %}
 <h3 id="content_block_headline">Alle Auktionen</h3>
-    <table id="position_list">
-        <thead>
-            <tr>
-                <th class="preview_head_cell pos_table_cell">
-                    <!--<img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="Preview" height="80" width="80" hidden="true">-->
-                    <span>Preview</span>
-                </th>
-                <th class="pos_name_field pos_table_cell">
-                    <a class="pos_detail_ref">Position</a>
-                </th>
-                <th class="state_field pos_table_cell">
-                    <span class="list_span">Zustand</span>
-                </th>
-                <th class="time_field pos_table_cell">
-                    <span class="list_span">Position endet am</span>
-                </th>
-                <th class="price_field pos_table_cell">
-                    <span class="price_span">Gebot</span>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for article in context %}
-            <tr>
-                <td class="pos_table_cell">
-                    <img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="preview picture">
-                </td>
-                <td class="pos_name_field pos_table_cell">
-                    <a class="pos_detail_ref" href="/kyoubai/auctions/pos/{{ article.a_id }}">{{ article.a_name }}</a>
-                </td>
-                <td class="state_field pos_table_cell">
-                    <span class="list_span">{{ article.a_state }}</span>
-                </td>
-                <td class="time_field pos_table_cell">
-                    <span class="list_span">{{ article.a_time_end }}</span>
-                </td>
-                <td class="price_field pos_table_cell">
-                    <span class="price_span">{{article.price_start}} €</span>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+
+<table id="position_list">
+    <thead>
+        <tr>
+            <th class="pos_image_field preview_head_cell pos_table_cell">
+                <!--<img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="Preview" height="80" width="80" hidden="true">-->
+                <span>Preview</span>
+            </th>
+            <th class="pos_name_field pos_table_cell">
+                <a class="pos_detail_ref">Position</a>
+            </th>
+            <th class="state_field pos_table_cell">
+                <span class="list_span">Zustand</span>
+            </th>
+            <th class="time_field pos_table_cell">
+                <span class="list_span">Position endet am</span>
+            </th>
+            <th class="price_field pos_table_cell">
+                <span class="price_span">Gebot</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for article in context %}
+    <tr>
+        <td class="pos_image_field pos_table_cell">
+            <img src="{% static 'kyoubai/images/prev_tree.png' %}" alt="preview picture">
+        </td>
+        <td class="pos_name_field pos_table_cell">
+            <a class="pos_detail_ref" href="/kyoubai/auctions/pos/{{ article.a_id }}">{{ article.a_name }}</a>
+        </td>
+        <td class="state_field pos_table_cell">
+            <span class="list_span">{{ article.a_state }}</span>
+        </td>
+        <td class="time_field pos_table_cell">
+            <span class="list_span">{{ article.a_time_end }}</span>
+        </td>
+        <td class="price_field pos_table_cell">
+            <span class="price_span">{{article.price_start}} €</span>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
 {% if is_paginated %}
 <div id="page_bar">
     <ul>

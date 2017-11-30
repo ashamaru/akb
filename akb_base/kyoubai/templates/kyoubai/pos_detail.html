@@ -1,40 +1,69 @@
 {% extends 'kyoubai/base_template.html' %}
 
-{% block stylesheets %}
 
+{% block stylesheets %}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/carousell_styles.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'kyoubai/pos_detail.css' %}" />
     <script src="{% static 'kyoubai/remove_img_script.js' %}"> </script>
-
 {% endblock %}
+
 
 {% block left_container %}
 <div id="pseudo_container_sidebar"></div>
 {% endblock %}
 
+
 {% block content_container %}
 <div id="detail_wrapper">
-    <h2>{{ article.a_name }}</h2>
-    <p>{{ article.a_desc }}</p>
-    <p>{{ article.price_start }}</p>
-    <p>{{ article.price_growth }}</p>
-    <p>{{ article.a_time_end }}</p>
-    <p>{{ article.a_state }}</p>
-    <p>Aktuelles Gebot: {{ mbid }}</p>
+    <h2 id="art_id_and_name_h">
+        {{ article.a_name }}
+    </h2>
+    <p id="art_desc_p">
+        <b>Beschreibung:</b><br> {{ article.a_desc }}
+    </p>
+    <p id="art__price_start_p">
+        <b>Startpreis:</b> {{ article.price_start }}
+    </p>
+    <p id="art_price_growth_p">
+        <b>Preissteigerungen:</b> {{ article.price_growth }}
+    </p>
+    <p id="art_state_p">
+        <b>Zustand:</b> {{ article.a_state }}
+    </p>
+    <p id="art_time_end_p">
+        <b>Ende der Position:</b> {{ article.a_time_end }}
+    </p>
+    <p id="art_highest_bid_p">
+        <b>Aktuelles Gebot:</b> {{ mbid }}
+    </p>
 </div>
 
+
+<div id="art_bid_history">
+    <p>Abschnitt welcher bereits vorangegangene Gebote beinhaltet.</p>
+</div>
+
+
+<div id="picture_wrapper">
+    Der spätere container für Bildervorschau. Art der Vorschau noch in Bearbeitung.
+</div>
+
+
+<!--
 <div class="carousel_container">
     <h2>Carousel Example</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
+<!--
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
         <!-- Wrapper for slides -->
+<!--
             <div class="carousel-inner">
                 <div class="item active">
                     <img src="{% get_static_prefix %}kyoubai/images/{{pos.pos_name}}/1.jpg" onerror="removeWrapper(this)" style="width:100%;">
@@ -54,6 +83,7 @@
             </div>
 
         <!-- Left and right controls -->
+<!--
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left">&laquo;</span>
             </a>
@@ -62,8 +92,10 @@
             </a>
         </div>
 </div>
+-->
 
-<div>
+
+<div id="bid_container">
     {% if user.is_authenticated %}
     <p>
         <form id="bid_form" method="post" action="/kyoubai/auctions/pos/{{ cur_pos }}">
@@ -78,8 +110,8 @@
     </p>
     {% endif %}
 </div>
-
 {% endblock %}
+
 
 {% block footer %}
     We always need a footer!

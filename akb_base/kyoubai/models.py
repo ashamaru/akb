@@ -12,7 +12,7 @@ class Customer(models.Model):
     c_user = models.OneToOneField(User, null=True)
 
     def __str__(self):
-        return self.c_id.value_to_string() + self.c_name
+        return str(self.c_id) + self.c_name
 
 
 class Auction(models.Model):
@@ -25,6 +25,10 @@ class Auction(models.Model):
     def __str__(self):
         return self.au_id.value_to_string() + self.au_name
 
+# Article model
+# TODO:
+# - considering to seperate the official article number from the article id
+# - forging an auction identifier, (auction_nr + article_nr)
 class Article(models.Model):
     a_id = models.BigAutoField('Article Id', primary_key=True)
     a_name = models.CharField(max_length=100)

@@ -64,6 +64,14 @@ header {
     background: white;
 }
 
+/* content_container design phase heritage styles */
+
+#content_container > div {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 20px;
+}
+
 
 /* Top navigation bar styles */
 

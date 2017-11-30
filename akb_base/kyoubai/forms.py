@@ -6,4 +6,4 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='password', max_length=100, widget=forms.PasswordInput)
 
 class BidForm(forms.Form):
-    amount = forms.DecimalField(label='Betrag', max_digits=15, decimal_places=2)
+    amount = forms.DecimalField(label='Betrag', max_digits=15, decimal_places=2, widget=forms.NumberInput)
